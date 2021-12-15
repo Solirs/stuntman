@@ -46,7 +46,7 @@ func main() {
 	case "white": colr = White
 
 
-		default: clr = nil
+		default: colr = nil
 	}
 
 	arrl = make([]int, *cnt)
