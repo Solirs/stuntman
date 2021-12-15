@@ -1,0 +1,1 @@
+go build stuntman.go colors.go
