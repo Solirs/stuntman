@@ -87,8 +87,7 @@ func main() {
 	case "white":
 		colr = White
 
-	default:
-		colr = Reset
+		default: colr = Reset
 	}
 
 	arrl = make([]int, cnt) //Make array of non constant length
