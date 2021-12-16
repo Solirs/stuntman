@@ -1,4 +1,4 @@
-package main
+package inc
 
 var Red = "\033[31m"
 var Green = "\033[32m"

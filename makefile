@@ -1,12 +1,12 @@
 build:
 	@echo "Building stuntman..."
-	@go build stuntman.go colors.go
+	@go build stuntman.go 
 	
 
 install:
 	@echo "Installing stuntman..."
 	@echo "Compiling..."
-	@go build stuntman.go colors.go
+	@go build stuntman.go
 	@echo "Copying to /usr/local/bin..."
 	@cp stuntman /usr/local/bin
 uninstall:

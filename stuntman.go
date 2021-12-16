@@ -3,59 +3,24 @@ package main
 import (
 	"flag"
 	"fmt"
-	"math/rand"
 	"os"
-	"strings"
-	"time"
-)
-var cnt int
-var vgap int
-var speed int
-var clr string
-var binar bool
-var arrl []int
+	eff "stuntman/effects"
+	inc "stuntman/include")
 
-var colr string
+
 
 func initflags(){
-	flag.IntVar(&cnt, "width", 50, "The width of the cascade in rows")
-	flag.IntVar(&vgap, "vertgap", 0, "Gap between lines")
-	flag.IntVar(&speed, "speed", 0, "Time between lines in milliseconds")
-	flag.StringVar(&clr, "color", "nil", "The color of the cascade")
-	flag.BoolVar(&binar, "binar", false, "Display random binary code")
+	flag.IntVar(&inc.Cnt, "width", 50, "The width of the cascade in rows")
+	flag.IntVar(&inc.Vgap, "vertgap", 0, "Gap between lines")
+	flag.IntVar(&inc.Speed, "speed", 0, "Time between lines in milliseconds")
+	flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
+	flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
+	flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
 	
 
 
 }
 
-func randbin(cnt int) {
-
-	rand.Seed(time.Now().UnixNano())
-
-	j := *&cnt
-
-	for i := 0; i < j; i++ {
-		arrl[i] = rand.Intn(2) //Generate a number between 1 and 0 for every num in the range of the width flag and add it to the array to be printed
-	}
-}
-
-func binary() {
-	for true {
-		randbin(cnt)
-
-		fmt.Println(strings.Trim(fmt.Sprint(arrl), "[]")) //Remove the stupid brackets when you print an array and print it
-		time.Sleep(time.Duration(speed)* time.Millisecond) //Sleep the amount of time specified in the speed flag
-		if vgap < 0 {
-			for i := 0; i < vgap; i++ {
-
-				fmt.Println() //Print an empty line the amount of times specified in the vgap flag
-
-			}
-		}
-
-	}
-
-}
 
 func main() {
 	
@@ -64,38 +29,40 @@ func main() {
 	initflags()
 	flag.Parse()
 
-	switch clr {
+	switch inc.Clr {
 
 	case "red":
-		colr = Red
+		inc.Colr = inc.Red
 
 	case "green":
-		colr = Green
+		inc.Colr = inc.Green
 
 	case "blue":
-		colr = Blue
+		inc.Colr = inc.Blue
 
 	case "purple":
-		colr = Purple
+		inc.Colr = inc.Purple
 
 	case "yellow":
-		colr = Yellow
+		inc.Colr = inc.Yellow
 
 	case "cyan":
-		colr = Cyan
+		inc.Colr = inc.Cyan
 
 	case "white":
-		colr = White
+		inc.Colr = inc.White
 
-		default: colr = Reset
+		default: inc.Colr = inc.Reset
 	}
 
-	arrl = make([]int, cnt) //Make array of non constant length
+	inc.Arrl = make([]int, inc.Cnt) //Make array of non constant length
 
-	fmt.Println(colr)
+	fmt.Println(inc.Colr)
 
-	if binar {
-		binary()
+	if inc.Binar {
+		eff.Binary()
+	}else if inc.Text{
+		eff.Texteff()
 	} else {
 		fmt.Println("No mode selected, QUITTING!!")
 		os.Exit(1)
