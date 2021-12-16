@@ -14,12 +14,12 @@ a simple program written in go to make you look like a hackerman
 
 ### Build from source
 
-`git clone https://github.com/Solirs/stuntman`
-`cd stuntman`
-`sudo make install`
+`git clone https://github.com/Solirs/stuntman
+cd stuntman
+sudo make install`
 
 
 ### Uninstall
 
-`cd STUNTMAN_DIRECTORY`
-`sudo make uninstall`
+`cd STUNTMAN_DIRECTORY
+sudo make uninstall`
