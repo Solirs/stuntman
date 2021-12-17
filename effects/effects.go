@@ -8,7 +8,7 @@ import(
 	inc "github.com/Solirs/stuntman/include")
 
 
-//Generate random array of bits
+//Randbin generates random array of bits
 func Randbin() {
 
 	rand.Seed(time.Now().UnixNano())
@@ -20,7 +20,7 @@ func Randbin() {
 	}
 }
 
-//Displays the Binary effect
+//Binary displays the Binary effect
 func Binary() {
 	for  {
 		Randbin()
@@ -39,7 +39,7 @@ func Binary() {
 
 }
 
-//Loops the Randstring function
+//Texteff loops the Randstring function
 func Texteff(){
 
 	for {
@@ -51,7 +51,7 @@ func Texteff(){
 }
 
 
-//Creates a random string
+//RandString creates a random string
 func RandString(){
 
 	rand.Seed(time.Now().UnixNano())
@@ -62,7 +62,7 @@ func RandString(){
 
 	for i := range Strdrop{
 
-		Strdrop[i] = inc.Ascii[rand.Intn(len(inc.Ascii))]
+		Strdrop[i] = inc.ASCII[rand.Intn(len(inc.ASCII))]
 		
 
 

@@ -22,7 +22,7 @@ func initflags(){
 }
 
 
-//Display Version
+//Version : Displays version of stuntman
 func Version(){
 	fmt.Print(`
 	
