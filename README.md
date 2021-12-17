@@ -1,3 +1,5 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Solirs/stuntman.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Solirs/stuntman/alerts/)
+
 # stuntman
 a simple program written in go to make you look like a hackerman
 
