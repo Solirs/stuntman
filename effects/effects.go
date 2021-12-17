@@ -7,6 +7,8 @@ import(
 	"fmt"
 	inc "github.com/Solirs/stuntman/include")
 
+
+//Generate random array of bits
 func Randbin() {
 
 	rand.Seed(time.Now().UnixNano())
@@ -18,6 +20,7 @@ func Randbin() {
 	}
 }
 
+//Displays the Binary effect
 func Binary() {
 	for  {
 		Randbin()
@@ -36,6 +39,7 @@ func Binary() {
 
 }
 
+//Loops the Randstring function
 func Texteff(){
 
 	for {
@@ -47,6 +51,7 @@ func Texteff(){
 }
 
 
+//Creates a random string
 func RandString(){
 
 	rand.Seed(time.Now().UnixNano())
