@@ -1,79 +1,71 @@
 package effects
 
-import(
-	"time"
-	"math/rand"
-	"strings"
-	"fmt"
-	inc "github.com/Solirs/stuntman/include")
-
+import (
+        "fmt"
+        inc "github.com/Solirs/stuntman/include"
+        "math/rand"
+        "strings"
+        "time"
+)
 
 //Randbin generates random array of bits
 func Randbin() {
 
-	rand.Seed(time.Now().UnixNano())
+        rand.Seed(time.Now().UnixNano())
 
-	j := inc.Cnt
+        j := inc.Cnt
 
-	for i := 0; i < j; i++ {
-		inc.Arrl[i] = rand.Intn(2) //Generate a number between 1 and 0 for every num in the range of the width flag and add it to the array to be printed
-	}
+        for i := 0; i < j; i++ {
+                inc.Arrl[i] = rand.Intn(2) //Generate a number between 1 and 0 for every num in the range of the width flag and add it to the array to be printed
+        }
 }
 
 //Binary displays the Binary effect
 func Binary() {
-	for  {
-		Randbin()
+        for {
+                Randbin()
 
+                fmt.Println(strings.Trim(fmt.Sprint(inc.Arrl), "[]"))   //Remove the stupid brackets when you print an array and print it
+                time.Sleep(time.Duration(inc.Speed) * time.Millisecond) //Sleep the amount of time specified in the speed flag
+                for i := 0; i < inc.Vgap; i++ {
 
-		fmt.Println(strings.Trim(fmt.Sprint(inc.Arrl), "[]")) //Remove the stupid brackets when you print an array and print it
-		time.Sleep(time.Duration(inc.Speed)* time.Millisecond) //Sleep the amount of time specified in the speed flag
-			for i := 0; i < inc.Vgap; i++ {
+                        fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
-				fmt.Println() //Print an empty line the amount of times specified in the vgap flag
+                }
 
-			}
-		
-
-	}
+        }
 
 }
 
 //Texteff loops the Randstring function
-func Texteff(){
+func Texteff() {
 
-	for {
-		RandString()
-	}
-
-	
+        for {
+                RandString()
+        }
 
 }
 
-
 //RandString creates a random string
-func RandString(){
+func RandString() {
 
-	rand.Seed(time.Now().UnixNano())
+        rand.Seed(time.Now().UnixNano())
 
-	j := inc.Cnt
+        j := inc.Cnt
 
-	var Strdrop = make([]rune, j)
+        var Strdrop = make([]rune, j)
 
-	for i := range Strdrop{
+        for i := range Strdrop {
 
-		Strdrop[i] = inc.ASCII[rand.Intn(len(inc.ASCII))]
-		
+                Strdrop[i] = inc.ASCII[rand.Intn(len(inc.ASCII))]
 
+        }
+        fmt.Println(string(Strdrop))
+        time.Sleep(time.Duration(inc.Speed) * time.Millisecond) //Sleep the amount of time specified in the speed flag
+        for i := 0; i < inc.Vgap; i++ {
 
-	}
-	fmt.Println(string(Strdrop))
-	time.Sleep(time.Duration(inc.Speed)* time.Millisecond) //Sleep the amount of time specified in the speed flag
-		for i := 0; i < inc.Vgap; i++ {
+                fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
-			fmt.Println() //Print an empty line the amount of times specified in the vgap flag
-
-		}
-	
+        }
 
 }

@@ -1,6 +1,5 @@
 package inc
 
-
 //Red color
 var Red = "\033[31m"
 
@@ -23,4 +22,4 @@ var Cyan = "\033[36m"
 var White = "\033[37m"
 
 //Reset terminal color
-var Reset="\033[0m" 
+var Reset = "\033[0m"

@@ -1,6 +1,5 @@
 package inc
 
-
 //Cnt : the width of the displayed effects
 var Cnt int
 
@@ -19,18 +18,14 @@ var Binar bool
 //Arrl : temporary array used for effects
 var Arrl []int
 
-
 //Text : Displays text effct
 var Text bool
-
 
 //ASCII : List of characters to use in the next effect
 var ASCII = []rune("abcdefg;()[{}]hijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS                                                       ")
 
-
 //Colr : Unix color code of the chosen color
 var Colr string
-
 
 //V : Option to display version
 var V bool

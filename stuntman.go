@@ -1,94 +1,89 @@
 package main
+
 import (
-	"flag"
-	"fmt"
-	"os"
-	eff "github.com/Solirs/stuntman/effects"
-	inc "github.com/Solirs/stuntman/include")
+        "flag"
+        "fmt"
+        eff "github.com/Solirs/stuntman/effects"
+        inc "github.com/Solirs/stuntman/include"
+        "os"
+)
 
-
-
-func initflags(){
-	flag.IntVar(&inc.Cnt, "width", 50, "The width of the cascade in rows")
-	flag.IntVar(&inc.Vgap, "vertgap", 0, "Gap between lines")
-	flag.IntVar(&inc.Speed, "speed", 0, "Time between lines in milliseconds")
-	flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
-	flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
-	flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
-	flag.BoolVar(&inc.V, "v", false, "Display version and additional info")
-	
-
+func initflags() {
+        flag.IntVar(&inc.Cnt, "width", 50, "The width of the cascade in rows")
+        flag.IntVar(&inc.Vgap, "vertgap", 0, "Gap between lines")
+        flag.IntVar(&inc.Speed, "speed", 0, "Time between lines in milliseconds")
+        flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
+        flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
+        flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
+        flag.BoolVar(&inc.V, "v", false, "Display version and additional info")
 
 }
-
 
 //Version : Displays version of stuntman
-func Version(){
-	fmt.Print(`
-	
-	
+func Version() {
+        fmt.Print(`
+
+
 stuntman
-	-Version : ALPHA-DEV
-	-Author : Solirs
-	-Repo : https://github.com/Solirs/stuntman
-	
-	
-	
-	`, "\n")
-	os.Exit(0)
+        -Version : ALPHA-DEV
+        -Author : Solirs
+        -Repo : https://github.com/Solirs/stuntman
+
+
+
+        `, "\n")
+        os.Exit(0)
 }
 
-
 func main() {
-	
 
+        initflags()
+        flag.Parse()
 
-	initflags()
-	flag.Parse()
+        if inc.V {
+                Version()
 
-	if inc.V{
-		Version()
+        }
 
-	}
+        switch inc.Clr {
 
-	switch inc.Clr {
+        case "red":
+                inc.Colr = inc.Red
 
-	case "red":
-		inc.Colr = inc.Red
+        case "green":
+                inc.Colr = inc.Green
 
-	case "green":
-		inc.Colr = inc.Green
+        case "blue":
+                inc.Colr = inc.Blue
 
-	case "blue":
-		inc.Colr = inc.Blue
+        case "purple":
+                inc.Colr = inc.Purple
 
-	case "purple":
-		inc.Colr = inc.Purple
+        case "yellow":
+                inc.Colr = inc.Yellow
 
-	case "yellow":
-		inc.Colr = inc.Yellow
+        case "cyan":
+                inc.Colr = inc.Cyan
 
-	case "cyan":
-		inc.Colr = inc.Cyan
+        case "white":
+                inc.Colr = inc.White
 
-	case "white":
-		inc.Colr = inc.White
+        default:
+                inc.Colr = inc.Reset
+        }
 
-		default: inc.Colr = inc.Reset
-	}
+        inc.Arrl = make([]int, inc.Cnt) //Make array of non constant length
 
-	inc.Arrl = make([]int, inc.Cnt) //Make array of non constant length
+        fmt.Println(inc.Colr)
 
-	fmt.Println(inc.Colr)
+        if inc.Binar {
+                eff.Binary()
+        } else if inc.Text {
+                eff.Texteff()
+        } else {
+                fmt.Println("No mode selected, QUITTING!!")
+                os.Exit(1)
 
-	if inc.Binar {
-		eff.Binary()
-	}else if inc.Text{
-		eff.Texteff()
-	} else {
-		fmt.Println("No mode selected, QUITTING!!")
-		os.Exit(1)
-
-	}
+        }
 
 }
