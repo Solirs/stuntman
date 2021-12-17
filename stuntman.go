@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	eff "stuntman/effects"
-	inc "stuntman/include")
+	eff "github.com/Solirs/stuntman/effects"
+	inc "github.com/Solirs/stuntman/include")
 
 
 

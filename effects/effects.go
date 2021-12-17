@@ -5,7 +5,7 @@ import(
 	"math/rand"
 	"strings"
 	"fmt"
-	inc "stuntman/include")
+	inc "github.com/Solirs/stuntman/include")
 
 func Randbin() {
 
