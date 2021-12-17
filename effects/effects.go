@@ -19,19 +19,18 @@ func Randbin() {
 }
 
 func Binary() {
-	for true {
+	for  {
 		Randbin()
 
 
 		fmt.Println(strings.Trim(fmt.Sprint(inc.Arrl), "[]")) //Remove the stupid brackets when you print an array and print it
 		time.Sleep(time.Duration(inc.Speed)* time.Millisecond) //Sleep the amount of time specified in the speed flag
-		if inc.Vgap < 0 {
 			for i := 0; i < inc.Vgap; i++ {
 
 				fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
 			}
-		}
+		
 
 	}
 
@@ -65,12 +64,11 @@ func RandString(){
 	}
 	fmt.Println(string(Strdrop))
 	time.Sleep(time.Duration(inc.Speed)* time.Millisecond) //Sleep the amount of time specified in the speed flag
-	if inc.Vgap < 0 {
 		for i := 0; i < inc.Vgap; i++ {
 
 			fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
 		}
-	}
+	
 
 }
