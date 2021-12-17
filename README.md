@@ -6,9 +6,14 @@ a simple program written in go to make you look like a hackerman
 ## Demo
 
 
-`stuntman -color red -width 70 -binar`
+`stuntman -binar -width 90 -color cyan`
 
-![alt text](https://github.com/Solirs/stuntman/blob/main/ressources/demo.png?raw=true)
+![alt text](https://github.com/Solirs/stuntman/blob/main/ressources/Demo-1.png?raw=true)
+
+
+`stuntman -text -width 90 -vertgap 1 -color green`
+
+![alt text](https://github.com/Solirs/stuntman/blob/main/ressources/Demo-2.png?raw=true)
 
 ## Installation
 
