@@ -1,4 +1,4 @@
-[![Language grade: Go](https://img.shields.io/lgtm/grade/go/g/Solirs/stuntman.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Solirs/stuntman/context:go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Solirs/stuntman)](https://goreportcard.com/report/github.com/Solirs/stuntman)
 
 # stuntman
 a simple program written in go to make you look like a hackerman
