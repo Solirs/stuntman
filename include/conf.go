@@ -14,3 +14,5 @@ var Text bool
 var Ascii = []rune("abcdefg;()[{}]hijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS                                                       ")
 
 var Colr string
+
+var V bool

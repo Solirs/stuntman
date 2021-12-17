@@ -16,9 +16,25 @@ func initflags(){
 	flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
 	flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
 	flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
+	flag.BoolVar(&inc.V, "v", false, "Display version and additonal info")
 	
 
 
+}
+
+func Version(){
+	fmt.Print(`
+	
+	
+stuntman
+	-Version : ALPHA-DEV
+	-Author : Solirs
+	-Repo : https://github.com/Solirs/stuntman
+	
+	
+	
+	`, "\n")
+	os.Exit(0)
 }
 
 
@@ -28,6 +44,11 @@ func main() {
 
 	initflags()
 	flag.Parse()
+
+	if inc.V{
+		Version()
+
+	}
 
 	switch inc.Clr {
 
