@@ -10,12 +10,15 @@ import (
 
 func initflags() {
         flag.IntVar(&inc.Cnt, "width", 50, "The width of the cascade in rows")
-        flag.IntVar(&inc.Vgap, "vertgap", 0, "Gap between lines")
+        flag.IntVar(&inc.Vgap, "linegap", 0, "Gap between lines")
+        flag.IntVar(&inc.Spaces, "spaces", 0, "An index to determine how many spaces will be generated when using the -text mode, the higher it is, the more spaces.")
         flag.IntVar(&inc.Speed, "speed", 0, "Time between lines in milliseconds")
         flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
         flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
         flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
-        flag.BoolVar(&inc.V, "v", false, "Display version and additional info")
+        flag.BoolVar(&inc.V, "version", false, "Display version and additional info")
+        flag.BoolVar(&inc.Loweronly, "loweronly", false, "Only use lowercase text in -text mode.")
+        flag.BoolVar(&inc.Upperonly, "upperonly", false, "Only use uppercase text in -text mode.")
 
 }
 
