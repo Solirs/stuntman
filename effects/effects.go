@@ -41,9 +41,9 @@ func Binary() {
 func Texteff() {
 
 	if inc.Loweronly {
-		inc.ASCII = inc.ASCII_Lower
+		inc.ASCII = inc.ASCIILower
 	} else if inc.Upperonly {
-		inc.ASCII = inc.ASCII_Upper
+		inc.ASCII = inc.ASCIIUpper
 	}
 
 	for m := 0; m < inc.Spaces; m++ {
