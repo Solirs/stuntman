@@ -96,3 +96,6 @@ I personally tested stuntman on the following:
 
 ##### Generate lines from a custom set of given strings separed by ",".
 
+#### -width
+
+##### The width of the effect in rows 
