@@ -17,6 +17,10 @@ a simple program written in go to make you look like a hackerman with cool termi
 
 ![alt text](https://github.com/Solirs/stuntman/blob/main/ressources/Demo-bin-2.png?raw=true)
 
+`stuntman -custom 0,1,2,3,4,5,6,7,8,9 -color green -speed 55 -spaces 1 -width 100`
+
+![alt text](https://github.com/Solirs/stuntman/blob/main/ressources/Demo-custom.png?raw=true)
+
 ## Installation
 
 ### Build from source

@@ -14,6 +14,7 @@ func initflags() {
 	flag.IntVar(&inc.Spaces, "spaces", 0, "An index to determine how many spaces will be generated when using the -text mode, the higher it is, the more spaces.")
 	flag.IntVar(&inc.Speed, "speed", 0, "Time between lines in milliseconds")
 	flag.StringVar(&inc.Clr, "color", "nil", "The color of the cascade")
+	flag.StringVar(&inc.Custom_string, "custom", "nil", "Use a custom set of characters")
 	flag.BoolVar(&inc.Binar, "binar", false, "Display random Binary code")
 	flag.BoolVar(&inc.Text, "text", false, "Display random text characters")
 	flag.BoolVar(&inc.V, "version", false, "Display version and additional info")
@@ -83,10 +84,15 @@ func main() {
 		eff.Binary()
 	} else if inc.Text {
 		eff.Texteff()
+	} else if inc.Custom_string != "nil" {
+		eff.Init_Custom()
+
 	} else {
 		fmt.Println("No mode selected, QUITTING!!")
 		os.Exit(1)
 
 	}
+
+	//This is only done once so spamming if else statements is fine i guess
 
 }

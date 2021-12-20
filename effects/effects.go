@@ -9,8 +9,8 @@ import (
 	inc "github.com/Solirs/stuntman/include"
 )
 
-//Randbin generates random array of bits
-func Randbin() {
+//Randbin: DEPRECATED
+/*func Randbin() {
 
 	rand.Seed(time.Now().UnixNano())
 
@@ -30,18 +30,20 @@ func Randbin() {
 		fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
 	}
-}
+}*/
 
 //Binary displays the Binary effect
 func Binary() {
 
+	inc.Charlist = inc.Binary_list
+
 	for m := 0; m < inc.Spaces; m++ {
 
-		inc.Binary_list = append(inc.Binary_list, " ")
+		inc.Charlist = append(inc.Charlist, " ")
 
 	}
 	for {
-		Randbin()
+		RandString()
 
 	}
 
@@ -51,14 +53,16 @@ func Binary() {
 func Texteff() {
 
 	if inc.Loweronly {
-		inc.ASCII = inc.ASCIILower
+		inc.Charlist = inc.ASCIILower
 	} else if inc.Upperonly {
-		inc.ASCII = inc.ASCIIUpper
+		inc.Charlist = inc.ASCIIUpper
+	}else{
+		inc.Charlist = inc.ASCII
 	}
 
 	for m := 0; m < inc.Spaces; m++ {
 
-		inc.ASCII = append(inc.ASCII, " ")
+		inc.Charlist = append(inc.Charlist, " ")
 
 	}
 
@@ -68,7 +72,7 @@ func Texteff() {
 
 }
 
-//RandString creates a random string
+//RandString generates a line according to inc.Charlist and displays it, its sort of the engine of stuntman
 func RandString() {
 
 	rand.Seed(time.Now().UnixNano())
@@ -79,7 +83,7 @@ func RandString() {
 
 	for i := range Strdrop {
 
-		Strdrop[i] = inc.ASCII[rand.Intn(len(inc.ASCII))]
+		Strdrop[i] = inc.Charlist[rand.Intn(len(inc.Charlist))]
 
 	}
 	fmt.Println(strings.Trim(fmt.Sprint(Strdrop), "[]"))
@@ -88,6 +92,22 @@ func RandString() {
 
 		fmt.Println() //Print an empty line the amount of times specified in the vgap flag
 
+	}
+
+}
+
+func Init_Custom() {
+
+	inc.Charlist = strings.Split(inc.Custom_string, ",")
+
+	for m := 0; m < inc.Spaces; m++ {
+
+		inc.Charlist = append(inc.Charlist, " ")
+
+	}
+
+	for {
+		RandString()
 	}
 
 }
