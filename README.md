@@ -31,6 +31,25 @@ a simple program written in go to make you look like a hackerman with cool termi
 
 `sudo make install`
 
+### Precompiled binary
+
+Download the release tarball in the releases.
+
+`tar -xvf stuntman_release_*.*.*.tar.gz`
+
+`cd stuntman_release_*.*.*`
+
+`sudo make install`
+
+### Compatibility
+
+Should work on any Unix-like operating system, especially if you build from source.
+
+I personally tested stuntman on the following:
+
+  - FreeBSD 13.0-Release (Working)
+  - Arch Linux (Working)
+
 
 ### Uninstall
 
