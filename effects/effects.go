@@ -15,18 +15,34 @@ func Randbin() {
 
 	j := inc.Cnt
 
-	for i := 0; i < j; i++ {
-		inc.Arrl[i] = rand.Intn(2) //Generate a number between 1 and 0 for every num in the range of the width flag and add it to the array to be printed
+	var Strdrop = make([]string, j)
+
+	for i := range Strdrop {
+
+		Strdrop[i] = inc.Binary_list[rand.Intn(len(inc.Binary_list))]
+
+	}
+	fmt.Println(strings.Trim(fmt.Sprint(Strdrop), "[]"))
+	time.Sleep(time.Duration(inc.Speed) * time.Millisecond) //Sleep the amount of time specified in the speed flag
+	for i := 0; i < inc.Vgap; i++ {
+
+		fmt.Println() //Print an empty line the amount of times specified in the vgap flag
+
 	}
 }
 
 //Binary displays the Binary effect
 func Binary() {
+
+
+	for m := 0; m < inc.Spaces; m++ {
+
+		inc.Binary_list = append(inc.Binary_list, " ")
+
+	}
 	for {
 		Randbin()
 
-		fmt.Println(strings.Trim(fmt.Sprint(inc.Arrl), "[]"))   //Remove the stupid brackets when you print an array and print it
-		time.Sleep(time.Duration(inc.Speed) * time.Millisecond) //Sleep the amount of time specified in the speed flag
 		for i := 0; i < inc.Vgap; i++ {
 
 			fmt.Println() //Print an empty line the amount of times specified in the vgap flag
