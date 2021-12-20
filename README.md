@@ -49,6 +49,7 @@ I personally tested stuntman on the following:
 
   - FreeBSD 13.0-Release (Working)
   - Arch Linux (Working)
+  - Fedora 35 (Working)
 
 
 ### Uninstall
