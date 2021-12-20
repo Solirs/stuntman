@@ -1,6 +1,6 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/Solirs/stuntman)](https://goreportcard.com/report/github.com/Solirs/stuntman)
 # stuntman
-a simple program written in go to make you look like a hackerman
+a simple program written in go to make you look like a hackerman with cool terminal effects
 
 
 
