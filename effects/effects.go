@@ -32,48 +32,52 @@ import (
 	}
 }*/
 
-//Binary displays the Binary effect
-func Binary() {
-
-	inc.Charlist = inc.Binary_list
+//InitSpaces : Appends the number of spaces specified in the -spaces flag to the Charlist
+func InitSpaces() {
 
 	for m := 0; m < inc.Spaces; m++ {
 
 		inc.Charlist = append(inc.Charlist, " ")
 
 	}
+
+}
+
+//Binary : sets Charlist to inc.Binary_list and loops GenLine
+func Binary() {
+
+	inc.Charlist = inc.Binary_list
+
+	InitSpaces()
+
 	for {
-		RandString()
+		GenLine()
 
 	}
 
 }
 
-//Texteff loops the Randstring function
-func Texteff() {
+//Text : sets Charlist to one of the ASCII slices and loops GenLine
+func Text() {
 
 	if inc.Loweronly {
 		inc.Charlist = inc.ASCIILower
 	} else if inc.Upperonly {
 		inc.Charlist = inc.ASCIIUpper
-	}else{
+	} else {
 		inc.Charlist = inc.ASCII
 	}
 
-	for m := 0; m < inc.Spaces; m++ {
-
-		inc.Charlist = append(inc.Charlist, " ")
-
-	}
+	InitSpaces()
 
 	for {
-		RandString()
+		GenLine()
 	}
 
 }
 
-//RandString generates a line according to inc.Charlist and displays it, its sort of the engine of stuntman
-func RandString() {
+//GenLine generates a line according to inc.Charlist and displays it, its sort of the engine of stuntman
+func GenLine() {
 
 	rand.Seed(time.Now().UnixNano())
 
@@ -96,18 +100,15 @@ func RandString() {
 
 }
 
-func Init_Custom() {
+//Custom : Sets Charlist to your custom string specified in the -custom flag and loops GenLine
+func Custom() {
 
 	inc.Charlist = strings.Split(inc.Custom_string, ",")
 
-	for m := 0; m < inc.Spaces; m++ {
-
-		inc.Charlist = append(inc.Charlist, " ")
-
-	}
+	InitSpaces()
 
 	for {
-		RandString()
+		GenLine()
 	}
 
 }

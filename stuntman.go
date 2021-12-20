@@ -83,9 +83,9 @@ func main() {
 	if inc.Binar {
 		eff.Binary()
 	} else if inc.Text {
-		eff.Texteff()
+		eff.Text()
 	} else if inc.Custom_string != "nil" {
-		eff.Init_Custom()
+		eff.Custom()
 
 	} else {
 		fmt.Println("No mode selected, QUITTING!!")
