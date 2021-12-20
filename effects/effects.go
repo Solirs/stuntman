@@ -2,10 +2,11 @@ package effects
 
 import (
 	"fmt"
-	inc "github.com/Solirs/stuntman/include"
 	"math/rand"
 	"strings"
 	"time"
+
+	inc "github.com/Solirs/stuntman/include"
 )
 
 //Randbin generates random array of bits
@@ -34,7 +35,6 @@ func Randbin() {
 //Binary displays the Binary effect
 func Binary() {
 
-
 	for m := 0; m < inc.Spaces; m++ {
 
 		inc.Binary_list = append(inc.Binary_list, " ")
@@ -42,12 +42,6 @@ func Binary() {
 	}
 	for {
 		Randbin()
-
-		for i := 0; i < inc.Vgap; i++ {
-
-			fmt.Println() //Print an empty line the amount of times specified in the vgap flag
-
-		}
 
 	}
 
