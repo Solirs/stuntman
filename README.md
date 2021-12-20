@@ -57,3 +57,42 @@ I personally tested stuntman on the following:
 `cd STUNTMAN_DIRECTORY`
 
 `sudo make uninstall`
+
+## Use guide
+
+#### -h
+
+##### Displays the help menu
+
+#### -color
+
+##### The color of the text, can be cyan, blue, red, green, purple, or white.
+
+#### -speed
+
+##### The delay between every new lines in milliseconds
+
+#### -linegap
+
+##### Gap between every new line
+
+#### -text
+
+##### Generate ascii text
+
+##### -loweronly
+
+###### Only generate lowercase characters and special symbols
+
+##### -upperonly
+
+###### Same as loweronly but for upper
+
+#### -binar
+
+##### Generate ones and zeroe's
+
+#### -custom foo,bar,eggs
+
+##### Generate lines from a custom set of given strings separed by ",".
+
