@@ -29,7 +29,7 @@ func Version() {
 
 
 stuntman
-        -Version : ALPHA-DEV
+        -Version : 1.0.0
         -Author : Solirs
         -Repo : https://github.com/Solirs/stuntman
 
