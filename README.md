@@ -6,6 +6,7 @@ a simple program written in go to make you look like a hackerman
 
 ## Demo
 
+##### Obviously speed isn't visible because those are images and not videos
 
 `stuntman -text -spaces 100 -loweronly -width 90 -speed 35 -color green`
 
