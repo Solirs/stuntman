@@ -31,7 +31,7 @@ var Loweronly bool
 var Upperonly bool
 
 //Binary_list
-var Binary_list = []string{"1","0"}
+var Binary_list = []string{"1", "0"}
 
 //ASCII : List of characters to use in the next effect
 var ASCII = []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "{", "}", "[", "]", ";", "§"}
