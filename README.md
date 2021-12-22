@@ -1,5 +1,5 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/Solirs/stuntman)](https://goreportcard.com/report/github.com/Solirs/stuntman)
-# stuntman
+# stuntman v1.0.0
 a simple program written in go to make you look like a hackerman with cool terminal effects
 
 
@@ -36,9 +36,71 @@ a simple program written in go to make you look like a hackerman with cool termi
 
 `sudo make install`
 
+### Precompiled binary
+
+Download the release tarball in the releases.
+
+`tar -xvf stuntman_release_*.*.*.tar.gz`
+
+`cd stuntman_release_*.*.*`
+
+`sudo make install`
+
+### Compatibility
+
+Should work on any Unix-like operating system, especially if you build from source.
+
+I personally tested stuntman on the following:
+
+  - FreeBSD 13.0-Release (Working)
+  - Arch Linux (Working)
+  - Fedora 35 (Working)
+
 
 ### Uninstall
 
 `cd STUNTMAN_DIRECTORY`
 
 `sudo make uninstall`
+
+## Use guide
+
+#### -h
+
+##### Displays the help menu
+
+#### -color
+
+##### The color of the text, can be cyan, blue, red, green, purple, or white.
+
+#### -speed
+
+##### The delay between every new lines in milliseconds
+
+#### -linegap
+
+##### Gap between every new line
+
+#### -text
+
+##### Generate ascii text
+
+##### -loweronly
+
+###### Only generate lowercase characters and special symbols
+
+##### -upperonly
+
+###### Same as loweronly but for upper
+
+#### -binar
+
+##### Generate ones and zeroe's
+
+#### -custom foo,bar,eggs
+
+##### Generate lines from a custom set of given strings separed by ",".
+
+#### -width
+
+##### The width of the effect in rows 
