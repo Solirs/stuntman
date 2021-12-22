@@ -15,11 +15,17 @@ var Binar bool
 //Spaces : An index to determine how many spaces will be generated when using the -text mode, the higher it is, the more spaces.
 var Spaces int
 
+//Rainbow_index : An integer representing the current index of the rainbow list to keep track of it
+var Rainbow_index int = 0
+
 //Arrl : temporary array used for effects
 var Arrl []int
 
 //Text : Displays text effct
 var Text bool
+
+//Rainbow : Enable rainbow effect
+var Rainbow bool
 
 //Loweronly : Only use lowercase text in -text mode.
 var Loweronly bool
@@ -44,6 +50,9 @@ var ASCIIUpper = []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
 
 //Binary_list an array of strings only containing 1 and 0 that can be modified according to other flags (i.e add spaces according to -spaces flag)
 var Binary_list = []string{"1", "0"}
+
+//Rainbow_list : List of all the colors for the rainbow effect
+var Rainbow_list = []string{Red, Yellow, Green, Blue, Cyan, Purple}
 
 //Colr : Unix color code of the chosen color
 var Colr string

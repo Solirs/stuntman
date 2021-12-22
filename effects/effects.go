@@ -90,6 +90,15 @@ func GenLine() {
 		Strdrop[i] = inc.Charlist[rand.Intn(len(inc.Charlist))]
 
 	}
+	if inc.Rainbow {
+
+		fmt.Print(inc.Rainbow_list[inc.Rainbow_index])
+		if inc.Rainbow_index > len(inc.Rainbow_list)-2 {
+			inc.Rainbow_index = 0
+		} else {
+			inc.Rainbow_index++
+		}
+	}
 	fmt.Println(strings.Trim(fmt.Sprint(Strdrop), "[]"))
 	time.Sleep(time.Duration(inc.Speed) * time.Millisecond) //Sleep the amount of time specified in the speed flag
 	for i := 0; i < inc.Vgap; i++ {

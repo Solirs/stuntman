@@ -72,6 +72,9 @@ func main() {
 	case "white":
 		inc.Colr = inc.White
 
+	case "rainbow":
+		inc.Rainbow = true
+
 	default:
 		inc.Colr = inc.Reset
 	}
